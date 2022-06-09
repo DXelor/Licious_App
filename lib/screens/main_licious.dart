@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:licious/screens/licious_page_body.dart';
 import 'package:licious/utils/colors.dart';
 import 'package:licious/widgets/main_text.dart';
+import 'package:licious/widgets/secondary_text.dart';
 
 class MainLicious extends StatefulWidget {
   const MainLicious({Key? key}) : super(key: key);
@@ -25,11 +27,19 @@ class _MainLiciousState extends State<MainLicious> {
                   Column(
                     children: [
                       MainText(
-                        text: "Bangladesh",
+                        text: "Japan",
                         color: AppColors.mainColor,
                         size: 30,
                       ),
-                      const Text('City')
+                      Row(
+                        children: [
+                          SecondaryText(
+                            text: 'Tokio',
+                            color: Colors.black54,
+                          ),
+                          Icon(Icons.arrow_drop_down_rounded)
+                        ],
+                      )
                     ],
                   ),
                   Center(
@@ -45,6 +55,7 @@ class _MainLiciousState extends State<MainLicious> {
                 ]),
           ),
         ),
+        FoodPageBody()
       ],
     ));
   }
