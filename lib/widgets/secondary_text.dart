@@ -17,7 +17,7 @@ class SecondaryText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontFamily: 'Roboto', color: color, height: height),
+      style: TextStyle(fontFamily: 'Lato', color: color, height: height),
     );
   }
 }
