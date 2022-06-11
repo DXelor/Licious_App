@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:licious/widgets/list_items.dart';
 
 import '../utils/colors.dart';
 import '../widgets/main_text.dart';
@@ -53,71 +54,7 @@ class FoodPageHeader extends StatelessWidget {
             ),
           )
         ]),
-        Container(
-          margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 7.0),
-          height: 30.0,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Container(
-                  child: const Image(
-                image: AssetImage('assets/images/icons/todayDeals.png'),
-              )),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/chiken.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/fish.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/mutton.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/readyToCook.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/prawns.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/coldCuts.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/spreads.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/eggs.png'))
-              ]),
-              Column(children: [
-                Image(
-                    image: AssetImage('assets/images/icons/kebabs&Tandoor.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/combos.png'))
-              ]),
-              Column(children: [
-                Image(
-                    image: AssetImage('assets/images/icons/lunchboxSpeci.png'))
-              ]),
-              Column(children: [
-                Image(image: AssetImage('assets/images/icons/readyToCook.png'))
-              ]),
-
-              // Column(width: 95, child: Text('Today´s deals')),
-              // Column(width: 55, child: Text('Chiken')),
-              // Column(width: 95, child: Text('Fish & Seafood')),
-              // Column(width: 95, child: Text('Mutton')),
-              // Column(width: 95, child: Text('Ready to Cook')),
-              // Column(width: 95, child: Text('Prawns')),
-              // Column(width: 95, child: Text('Cold Cuts')),
-              // Column(width: 95, child: Text('Spreads')),
-              // Column(width: 95, child: Text('Eggs')),
-              // Column(width: 95, child: Text('Kebabs & Tandoor')),
-              // Column(width: 95, child: Text('Combos')),
-              // Column(width: 95, child: Text('Lunchbox Speci')),
-              // Column(width: 95, child: Text('Snacks')),
-            ],
-          ),
-        )
+        const ListviewScreen()
       ]),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:licious/screens/licious_page_body.dart';
+import 'package:licious/screens/licious_page_banner.dart';
 import 'package:licious/screens/licious_page_header.dart';
 
 class MainLicious extends StatefulWidget {
