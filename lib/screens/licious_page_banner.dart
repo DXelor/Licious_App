@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FoodPageBanner extends StatefulWidget {
@@ -11,20 +10,66 @@ class FoodPageBanner extends StatefulWidget {
 class _FoodPageBannerState extends State<FoodPageBanner> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 320,
-      child: PageView.builder(
-          itemCount: 1,
-          itemBuilder: (context, position) {
-            return _buildPageItem(position);
-          }),
+    return Column(
+      children: [
+        SizedBox(
+          height: 225,
+          child: PageView.builder(
+              itemCount: 3,
+              itemBuilder: (context, position) {
+                return _buildPageItem(position);
+              }),
+        ),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Center(
+                      child: Image(
+                          image: AssetImage(
+                              "assets/images/loyalty_licious_logo.png"))),
+                  Column(
+                    children: [
+                      FloatingActionButton(
+                          elevation: 2,
+                          backgroundColor: Colors.red[700],
+                          tooltip: 'Join Now',
+                          child: const Text(
+                            'Join Now',
+                            textAlign: TextAlign.center,
+                          ),
+                          onPressed: () => {}),
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(
+                width: 330,
+                child: Divider(
+                  height: 5,
+                  color: Colors.black,
+                ),
+              ),
+              const Center(
+                child: Text(
+                  'Enjoy unlimited free delivery & perks crafted for true meat lovers',
+                  textScaleFactor: 0.8,
+                ),
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 
   Widget _buildPageItem(int index) {
     return Column(children: [
       Container(
-        height: 230,
+        height: 220,
         margin: const EdgeInsets.only(left: 5, right: 5),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
@@ -32,30 +77,6 @@ class _FoodPageBannerState extends State<FoodPageBanner> {
             image: const DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage("assets/images/small_banner1.png"))),
-      ),
-      Container(
-        height: 40,
-        margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-                child: Image(
-                    image:
-                        AssetImage("assets/images/loyalty_licious_logo.png"))),
-            Container(
-              alignment: Alignment.topLeft,
-              child: FloatingActionButton(
-                  backgroundColor: Colors.red[700],
-                  tooltip: 'Join Now',
-                  child: Text(
-                    'Join Now',
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: () => {}),
-            )
-          ],
-        ),
       ),
     ]);
   }

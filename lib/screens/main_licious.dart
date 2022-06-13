@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:licious/screens/licious_page_banner.dart';
+import 'package:licious/screens/licious_page_body.dart';
 import 'package:licious/screens/licious_page_header.dart';
 
 class MainLicious extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MainLiciousState extends State<MainLicious> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
-      children: [FoodPageHeader(), FoodPageBanner()],
+      children: [FoodPageHeader(), FoodPageBanner(), FoodPageBody()],
     ));
   }
 }
