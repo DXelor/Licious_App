@@ -15,34 +15,45 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 }
 
 Widget _liciousWay() {
-  return SizedBox(
-    height: 80,
-    width: 370,
+  return Container(
+    padding: EdgeInsets.only(top: 15),
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              width: 370,
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Center(child: Text('Premium Produce')),
-                      Center(child: Text('World-Class Central Production Unit'))
+                      Column(
+                        children: [Text('Premium'), Text('Produce')],
+                      ),
+                      Column(
+                        children: [
+                          Text('World-Class Central'),
+                          Text('Production Unit')
+                        ],
+                      ),
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Center(child: Text('150 Quality Cheks')),
-                      Center(child: Text('Delivered Fresh Everyday'))
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [Text('150 Quality'), Text('Cheks')],
+                      ),
+                      Column(
+                        children: [Text('Delivered Fresh'), Text('Everyday')],
+                      ),
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
                       Center(child: Text('Extraordinary Cooking'))
                     ],
