@@ -31,12 +31,43 @@ Widget _liciousWay() {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
-                        children: [Text('Premium'), Text('Produce')],
+                        children: [
+                          Text('Premium'),
+                          Text('Produce'),
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            padding: const EdgeInsets.only(left: 45, right: 45),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                top: BorderSide(
+                                    width: 2.0,
+                                    color: Colors.lightBlue.shade50),
+                                bottom: BorderSide(
+                                    width: 2.0,
+                                    color: Colors.lightBlue.shade900),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       Column(
                         children: [
                           Text('World-Class Central'),
-                          Text('Production Unit')
+                          Text('Production Unit'),
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            padding: const EdgeInsets.only(left: 45, right: 45),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                top: BorderSide(
+                                    width: 2.0,
+                                    color: Colors.lightBlue.shade50),
+                                bottom: BorderSide(
+                                    width: 2.0,
+                                    color: Colors.lightBlue.shade900),
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ],
